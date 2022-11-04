@@ -1,0 +1,52 @@
+import random
+import math
+n=0
+s=0
+for i in range(0,100):
+    usract=input("enter your choice(rock(r),paper(p),scissors(s)):")
+    possibleaction=["r","p","s"]
+    pcact=random.choice(possibleaction)
+    print(pcact)
+    if usract==pcact:
+            print("its a tie")
+    elif usract=="r":
+            if pcact=="s":
+                print("you won")
+                n+=1
+                print(n)
+            else:
+                print("you lose")
+                s+=1
+                print(s)
+        
+    elif usract=="s":
+            if pcact=="r":
+                print("you lose")
+                s+=1
+                print(s)
+            else:
+                print("you won")
+                n+=1
+                print(n)
+                            
+    elif usract=="p":
+        if pcact=="s":
+            print("pc won")
+            s+=1
+            print(s)
+        else:
+            print("you won")
+            n+=1
+            print(n)
+    if(n==10 or s==10):
+        print("Your Game is Over")
+        if(n==10):
+          print("CONGRATULATIONS !!! YOU ARE THE WINNER")
+        else:
+          print("Sorry..You lose..Better luck next time") 
+        print("Your score is ",n)
+
+        break
+        
+                        
+        
